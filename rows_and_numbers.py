@@ -12,10 +12,10 @@ print(f'Output of the remainder from the division of the entered number: {int(nu
 
 #3
 def mult_two(a: int, b: int) -> int:
-    first_input = int(input())
-    second_input = int(input())
+    first_input = int(input('Enter the first number: '))
+    second_input = int(input('Enter the second number: '))
     multiplication_of_numbers = first_input * second_input
     return multiplication_of_numbers
 
 print('Example')
-print(mult_two(1, 2))
+print(f'The product of two numbers is: {mult_two(1, 2)}')
