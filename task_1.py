@@ -1,1 +1,3 @@
-print('Hello Artem! Сheck this homework')
+name_user = input("What's your name? ")
+print("Hello" ,name_user, "!")
+
