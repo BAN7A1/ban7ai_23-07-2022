@@ -1,19 +1,18 @@
 while True:
     try:
-        sign = input('Enter sign (**,*,/,+,-)')
+        sign = input('Enter sign (**,*,/,+,-): ')
         if sign not in ('**', '*', '/', '+', '-'):
             print('You entered an invalid character')
             break
 
-        if sign in ('**', '*', '/', '+', '-'):
-            first_number = input('Enter the number: ')
-            if first_number.find('.') == 1:
-                first_number = float(first_number)
-            elif first_number.isnumeric() == True:
-                first_number = int(first_number)
-            else:
-                print('You entered an invalid character')
-                break 
+        first_number = input('Enter the number: ')
+        if first_number.find('.') == 1:
+            first_number = float(first_number)
+        elif first_number.isnumeric() == True:
+            first_number = int(first_number)
+        else:
+            print('You entered an invalid character')
+            break 
 
         second_number = input('Enter the number: ')
         if second_number.find('.') == 1:
