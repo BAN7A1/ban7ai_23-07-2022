@@ -6,7 +6,7 @@ while True:
             break
 
         first_number = input('Enter the number: ')
-        if first_number.find('.') == 1:
+        if first_number.find('.'):
             first_number = float(first_number)
         elif first_number.isnumeric() == True:
             first_number = int(first_number)
@@ -38,4 +38,6 @@ while True:
             break
     except (TypeError, ValueError):
         print('You entered an invalid character')
+    except ZeroDivisionError:
+        print(f'Can\'t divice by zero') 
     break
