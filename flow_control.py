@@ -6,7 +6,7 @@ while True:
             break
 
         first_number = input('Enter the number: ')
-        if first_number.find('.') == 1:
+        if '.' in first_number:
             first_number = float(first_number)
         elif first_number.isnumeric():
             first_number = int(first_number)
@@ -15,7 +15,7 @@ while True:
             break 
 
         second_number = input('Enter the number: ')
-        if second_number.find('.') == 1:
+        if '.' in second_number:
             second_number = float(second_number)
         elif second_number.isnumeric():
             second_number = int(second_number)
