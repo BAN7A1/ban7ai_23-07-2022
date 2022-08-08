@@ -1,12 +1,19 @@
+exit = 'exit'
 while True:
     try:
         sign = input('Enter sign (**,*,/,+,-): ')
+        if sign == exit:
+            print('You closed the program')
+            break
         if sign not in ('**', '*', '/', '+', '-'):
             print('You entered an invalid character')
             break
 
         first_number = input('Enter the number: ')
-        if '.' in first_number:
+        if first_number == exit:
+            print('You closed the program')
+            break
+        if first_number.find('.') == 1:
             first_number = float(first_number)
         elif first_number.isnumeric():
             first_number = int(first_number)
@@ -15,7 +22,10 @@ while True:
             break 
 
         second_number = input('Enter the number: ')
-        if '.' in second_number:
+        if second_number == exit:
+            print('You closed the program')
+            break
+        if second_number.find('.') == 1:
             second_number = float(second_number)
         elif second_number.isnumeric():
             second_number = int(second_number)
