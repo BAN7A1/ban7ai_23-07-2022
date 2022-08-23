@@ -8,17 +8,24 @@ try:
 	end_input = int(input('Enter the second value: '))
 	print(f'The response of your operation is: {number_sub(start_input, end_input)}')
 except ValueError:
-	print('You entered the wrong value!')
+	print('You ent4ered the wrong value!')
 ##################################################
-def date_time():
-	input_user = int(input('Введіть число: '))
-	if input_user <= 60:
-		minutes = input_user // 60
-	if input_user <= 3600:
-		hours = input_user // 3600
-	if sec <= 86400:
-		days = input_user // 86400
-	return
+intervals = (
+	('weeks', 604800),('days', 86400),
+	('hours', 3600), ('minutes', 60),
+	('seconds', 1),
+	)
+def data_time(seconds, granularity = 2 ):
+	result = []
+	for name, count in intervals:
+		value = seconds // count
+		if value:
+			seconds -= value * count
+			if value == 1:
+				name = name.rstrip('s')
+			result.append("{} {}".format(value, name))
+	return ': '.join(result[:granularity])
+print(f'{data_time(3213213213,3213)}')
 ##################################################
 sum_list = [2, 10, 24, 21, 50, 125]
 
