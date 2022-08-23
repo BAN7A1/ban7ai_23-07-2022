@@ -1,5 +1,5 @@
-#new_dict = {element: chr(element) for element in range(6)}
-#print(new_dict)
+new_dict = {element: chr(element) for element in range(6)}
+print(new_dict)
 ##############################
 try:
 	user_input = input('Enter your message text: ')
