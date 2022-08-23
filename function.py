@@ -11,7 +11,14 @@ except ValueError:
 	print('You entered the wrong value!')
 ##################################################
 def date_time():
-	pass
+	input_user = int(input('Введіть число: '))
+	if input_user <= 60:
+		minutes = input_user // 60
+	if input_user <= 3600:
+		hours = input_user // 3600
+	if sec <= 86400:
+		days = input_user // 86400
+	return
 ##################################################
 sum_list = [2, 10, 24, 21, 50, 125]
 
