@@ -30,7 +30,10 @@ print(f'{data_time(3213213213,3213)}')
 sum_list = [2, 10, 24, 21, 50, 125]
 
 def sum_for(x):
-	return sum(i for i in x)
+	null = 0
+	for i in sum_list:
+		null = null + i
+	return null
 print(f'The sum of numbers through for is equal to: {sum_for(sum_list)}')
 
 def sum_while(x):
@@ -41,3 +44,41 @@ def sum_while(x):
 	return b
 print(f'The sum of numbers through while is equal to: {sum_while(sum_list)}')
 
+def sum_rek(x):
+	if len(x) == 1:
+		return x[0]
+	else:
+		return x[0] + sum_rek(x[1:])
+print(f'The sum of numbers through recursion is equal to: {sum_rek(sum_list)}')
+################################################
+a = int(input('Enter your number: '))
+def fibonacci(i):
+    if i <= 1:
+        return 0
+    elif i == 2:
+        return 1
+    return fibonacci(i - 1) + fibonacci(i - 2)
+
+print(f'Sequence number is: {fibonacci(a)}')
+##############################################
+def decorator1(func):
+	def buter():
+		print('помідор')
+		func()
+		print('хліб')
+	return buter
+def decorator2(func2):
+	def butter():
+		func2()
+		print('сир')
+	return butter
+
+@decorator1
+@decorator2
+
+def dsadsa():
+	print('м\'ясо')
+dsadsa()
+
+#I know that the code is with a curve decorator. 
+#I'm still trying to understand this topic ... it's very hard for me
