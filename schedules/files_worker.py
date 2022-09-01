@@ -12,10 +12,10 @@ with open('schedule.csv', 'w+', newline='') as csvfile:
 	writer.writerow({'departure point': 'Lviv', 'departure time': '09:40',
 		'destination point': 'Charkiv', 'arrival time': '21:14',
 		'cost ticket': '576 UAH'})
-
+#################################
 with open('schedule.csv', 'r', newline='') as csvfile:
 	reader = csv.DictReader(csvfile)
 	for i in reader:
-		print(f"{['departure point']} {['departure time']}
-			{['destination point']} {['arrival time']}
-			{['cost ticket']}")
+		print(type(i))
+		print(i)
+		
